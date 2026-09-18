@@ -3,13 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Pascual — Tapas & Bar. Estamos preparando algo nuevo." />
     <meta name="robots" content="noindex, nofollow" />
-    <title>Pascual — migration in progress</title>
+    <meta name="theme-color" content="#1d1712" />
+    <title>Pascual — Tapas & Bar</title>
+    <link rel="stylesheet" href="assets/css/site.css" />
   </head>
   <body>
-    <main>
-      <h1>Pascual</h1>
-      <p>Static-site migration in progress.</p>
+    <main class="welcome">
+      <div class="welcome__veil"></div>
+      <div class="welcome__content">
+        <p class="welcome__logo" aria-label="Pascual">Pascual</p>
+        <p class="eyebrow">Tapas &amp; Bar</p>
+        <h1>Algo nuevo está por llegar.</h1>
+        <p class="intro">Estamos renovando la experiencia Pascual. Muy pronto encontrarás aquí nuestra nueva casa digital.</p>
+        <p class="notice">We are preparing a new Pascual experience. See you soon.</p>
+      </div>
+      <footer>© <span id="year"></span> Pascual</footer>
     </main>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </body>
 </html>
