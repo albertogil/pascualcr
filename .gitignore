@@ -3,3 +3,5 @@
 .env.*
 !.env.example
 
+# Private WordPress exports used only during the static migration.
+.migration-source/
