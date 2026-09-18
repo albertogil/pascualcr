@@ -6,13 +6,12 @@
 - The current WordPress media library on DreamHost contains uploads through **2025**.
 - The backup includes the WordPress database, the cached home page, media, and a Spanish food and wine menu.
 
-The original homepage was largely a starter-template design. It should be redesigned rather than reproduced. The business identity recovered from the source is **Pascual — Tapas & Bar**.
+The business identity recovered from the source is **Pascual — Tapas & Bar**. A current live-site capture on 2026-09-18 confirmed the homepage and four current menu routes; the static implementation uses those current pages rather than the historical starter template.
 
 ## Content that requires approval before publication
 
-- Address, hours, reservation link, phone, and social profiles.
-- All food, beverage, and wine prices: the recovered menu is from 2023 and must be treated as historical.
-- The selection of current photography from the media library.
+- Hours, reservation link, and phone, which were not added to the static site without verification.
+- Any future menu-pricing update. The static menu images were sourced from the restored current site; confirm them before a later refresh.
 
 ## Local recovery workflow
 

@@ -1,0 +1,22 @@
+RewriteEngine On
+
+# Preserve the relevant WordPress permalinks when this site is deployed to Apache/DreamHost.
+RewriteRule ^menu/?$ https://www.potsandbowlscr.com/#menus [R=301,L,NE]
+
+RewriteCond %{QUERY_STRING} (^|&)page_id=173(&|$) [NC]
+RewriteRule ^$ / [R=301,L,QSD]
+RewriteCond %{QUERY_STRING} (^|&)page_id=449(&|$) [NC]
+RewriteRule ^$ /menu-espanol-comida/ [R=301,L,QSD]
+RewriteCond %{QUERY_STRING} (^|&)page_id=454(&|$) [NC]
+RewriteRule ^$ /menu-espanol-cocteles/ [R=301,L,QSD]
+RewriteCond %{QUERY_STRING} (^|&)page_id=469(&|$) [NC]
+RewriteRule ^$ /menu-espanol-vinos/ [R=301,L,QSD]
+RewriteCond %{QUERY_STRING} (^|&)page_id=439(&|$) [NC]
+RewriteRule ^$ /menu-english-food/ [R=301,L,QSD]
+RewriteCond %{QUERY_STRING} (^|&)page_id=526(&|$) [NC]
+RewriteRule ^$ https://www.potsandbowlscr.com/#menus [R=301,L,NE,QSD]
+
+# Keep a single secure, canonical hostname after the redirect rules above.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^www\.pascualcr\.com$ [NC]
+RewriteRule ^ https://www.pascualcr.com%{REQUEST_URI} [R=301,L,NE]

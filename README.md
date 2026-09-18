@@ -1,16 +1,25 @@
 # Pascual
 
-Static source for the Pascual website.
+Lightweight, framework-free static source for Pascual Tapas & Bar.
 
-## Status
+## Included pages
 
-The WordPress source, full 2023 backup, and current media library have been recovered from DreamHost. The public domain is not currently reachable. We are rebuilding the static site from the recovered material, with content and prices reviewed before deployment.
+- Home
+- Spanish food, cocktails, and wine menus
+- English food menu
+- `robots.txt`, `sitemap.xml`, and a small 404 page
 
-See [RECOVERY.md](RECOVERY.md) for the verified source inventory and review items.
+The visual content was captured from the restored live WordPress website on 2026-09-18. Private exports and original downloads live in `.migration-source/` and are deliberately excluded from Git.
+
+## Redirects
+
+`.htaccess` contains permanent redirects for the recovered WordPress page IDs and sends the old `/menu/` Pot & Bowls page to `https://www.potsandbowlscr.com/#menus`. The complete mapping is in `redirects.csv`.
+
+These Apache redirects become active when the static files are deployed to DreamHost. GitHub Pages does not process `.htaccess`.
 
 ## Principles
 
-- Plain HTML, CSS, and small progressive-enhancement JavaScript.
-- No framework, build step, trackers, or cookies by default.
+- Plain HTML and CSS: no framework, build step, trackers, or cookies.
+- Locally optimized WebP image assets.
 - Do not commit WordPress exports, credentials, customer data, or internal documents.
-- Deployment is deliberately not configured until the recovered site is reviewed.
+- Review menu pricing and business information before deployment.

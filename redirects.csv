@@ -1,0 +1,7 @@
+old_url,new_url,status,reason
+https://www.pascualcr.com/menu/,https://www.potsandbowlscr.com/#menus,301,Legacy Pot & Bowls menu page
+https://www.pascualcr.com/?page_id=173,https://www.pascualcr.com/,301,WordPress home page ID
+https://www.pascualcr.com/?page_id=449,https://www.pascualcr.com/menu-espanol-comida/,301,WordPress Spanish food menu ID
+https://www.pascualcr.com/?page_id=454,https://www.pascualcr.com/menu-espanol-cocteles/,301,WordPress Spanish cocktails menu ID
+https://www.pascualcr.com/?page_id=469,https://www.pascualcr.com/menu-espanol-vinos/,301,WordPress Spanish wine menu ID
+https://www.pascualcr.com/?page_id=439,https://www.pascualcr.com/menu-english-food/,301,WordPress English food menu ID
