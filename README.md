@@ -17,6 +17,10 @@ The visual content was captured from the restored live WordPress website on 2026
 
 These Apache redirects become active when the static files are deployed to DreamHost. GitHub Pages does not process `.htaccess`.
 
+## Search Console
+
+Google Search Console uses the URL-prefix property `https://www.pascualcr.com/`. Keep the `google-site-verification` meta tag in `index.html` when editing the page. The sitemap submitted to this property is `sitemap.xml`.
+
 ## Principles
 
 - Plain HTML and CSS: no framework, build step, trackers, or cookies.
