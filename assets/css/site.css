@@ -3,19 +3,19 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; }
 a { color: inherit; }
-.site-header { align-items: center; display: flex; justify-content: space-between; margin: auto; max-width: 82rem; min-height: 6.75rem; padding: .85rem 1.5rem; }
+.site-header { align-items: center; background: var(--wine); color: var(--cream); display: flex; justify-content: space-between; min-height: 6.75rem; padding: .85rem max(1.5rem, calc((100% - 79rem) / 2)); }
 .brand { display: block; width: 8.5rem; }
 .brand img { display: block; height: auto; width: 100%; }
 nav { display: flex; font: 600 .7rem/1.2 system-ui, sans-serif; gap: 1.3rem; letter-spacing: .11em; text-transform: uppercase; }
 nav a, .site-footer a { text-decoration: none; }
 nav a:hover, nav a:focus-visible, .site-footer a:hover, .site-footer a:focus-visible { text-decoration: underline; text-underline-offset: .25em; }
 .hero { background: var(--wine); color: var(--cream); display: grid; grid-template-columns: minmax(0, 1fr) minmax(20rem, 1fr); min-height: min(44rem, calc(100svh - 6.75rem)); }
-.hero__copy { align-self: center; padding: clamp(3rem, 8vw, 8rem); }
+.hero__copy { align-self: center; padding: clamp(3rem, 5vw, 5rem); }
 .eyebrow { color: currentColor; font: 700 .7rem/1.2 system-ui, sans-serif; letter-spacing: .18em; margin: 0 0 1.5rem; text-transform: uppercase; }
 h1, h2 { font-weight: 400; letter-spacing: -.055em; line-height: .98; }
-h1 { font-size: clamp(3rem, 5.6vw, 6rem); margin: 0; max-width: 12ch; }
+h1 { font-size: clamp(3rem, 4.5vw, 5rem); margin: 0; max-width: 12ch; }
 h2 { font-size: clamp(2.5rem, 5vw, 5.25rem); margin: 0; max-width: 15ch; }
-.hero__lede { font: 400 clamp(1rem, 1.5vw, 1.2rem)/1.55 system-ui, sans-serif; margin: 1.75rem 0 2rem; max-width: 34rem; }
+.hero__lede { font: 400 clamp(1rem, 1.5vw, 1.2rem)/1.55 system-ui, sans-serif; margin: 1.1rem 0 1.5rem; max-width: 34rem; }
 .button { border: 1px solid currentColor; display: inline-block; font: 700 .7rem/1 system-ui, sans-serif; letter-spacing: .12em; padding: 1rem 1.25rem; text-decoration: none; text-transform: uppercase; }
 .button:hover, .button:focus-visible { background: var(--cream); color: var(--wine); }
 .hero__image { height: 100%; min-height: 27rem; object-fit: cover; width: 100%; }
