@@ -21,6 +21,10 @@ These Apache redirects become active when the static files are deployed to Dream
 
 Google Search Console uses the URL-prefix property `https://www.pascualcr.com/`. Keep the `google-site-verification` meta tag in `index.html` when editing the page. The sitemap submitted to this property is `sitemap.xml`.
 
+## Analytics
+
+Google Analytics 4 property: **Pascual Tapas & Bar**. Measurement ID: `G-DFFGR6RVNK`. The Google tag is installed in every public HTML page; retain it when editing. Enhanced measurement is enabled. Do not send personal information through page URLs, forms, or Analytics events.
+
 ## Principles
 
 - Plain HTML and CSS: no framework, build step, trackers, or cookies.
