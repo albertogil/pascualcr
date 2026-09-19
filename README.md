@@ -23,7 +23,7 @@ Google Search Console uses the URL-prefix property `https://www.pascualcr.com/`.
 
 ## Analytics
 
-Google Analytics 4 property: **Pascual Tapas & Bar**. Measurement ID: `G-DFFGR6RVNK`. The Google tag is installed in every public HTML page; retain it when editing. Enhanced measurement is enabled. Do not send personal information through page URLs, forms, or Analytics events.
+Google Analytics 4 property: **Pascual Tapas & Bar**. Measurement ID: `G-DFFGR6RVNK`. `assets/js/analytics.js` loads the Google tag only after a visitor accepts analytics; keep its matching measurement-ID meta tag on indexable pages. Enhanced measurement is enabled. Do not send personal information through page URLs, forms, or Analytics events.
 
 ## Principles
 
