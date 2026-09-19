@@ -1,0 +1,60 @@
+name: Deploy to DreamHost
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dreamhost-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      SSH_OPTS: >-
+        -p 22
+        -i ~/.ssh/dreamhost_deploy_key
+        -o IdentitiesOnly=yes
+        -o PreferredAuthentications=publickey
+        -o PasswordAuthentication=no
+        -o KbdInteractiveAuthentication=no
+        -o BatchMode=yes
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install DreamHost deploy key
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.DREAMHOST_SSH_PRIVATE_KEY }}" > ~/.ssh/dreamhost_deploy_key
+          chmod 600 ~/.ssh/dreamhost_deploy_key
+
+      - name: Add DreamHost host key
+        run: ssh-keyscan -H "${{ secrets.DREAMHOST_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Verify SSH login
+        run: |
+          ssh $SSH_OPTS \
+            "${{ secrets.DREAMHOST_USER }}@${{ secrets.DREAMHOST_HOST }}" \
+            "echo DreamHost SSH login OK"
+
+      - name: Deploy static site
+        run: |
+          rsync -avz \
+            --itemize-changes \
+            --exclude ".DS_Store" \
+            --exclude ".git/" \
+            --exclude ".github/" \
+            --exclude ".gitignore" \
+            --exclude ".migration-source/" \
+            --exclude "README.md" \
+            --exclude "RECOVERY.md" \
+            --exclude "redirects.csv" \
+            --exclude "tools/" \
+            -e "ssh $SSH_OPTS" \
+            ./ \
+            "${{ secrets.DREAMHOST_USER }}@${{ secrets.DREAMHOST_HOST }}:${{ secrets.DREAMHOST_PATH }}/"
