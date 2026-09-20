@@ -9,7 +9,9 @@ Lightweight, framework-free static source for Pascual Tapas & Bar.
 - English food menu
 - `robots.txt`, `sitemap.xml`, and a small 404 page
 
-The visual content was captured from the restored live WordPress website on 2026-09-18. Private exports and original downloads live in `.migration-source/` and are deliberately excluded from Git.
+The visual content was captured from the restored live WordPress website on 2026-09-18 and again on 2026-09-20 after its restoration. The current live-reference capture is in `.migration-source/live-2026-09-20/` and includes the six published HTML pages, WordPress REST page export, and referenced public CSS, JavaScript, fonts, and images. Private exports and original downloads are deliberately excluded from Git.
+
+The recovered 2023 All-in-One WP Migration archive includes a historical database export. A fresh database export of the newly restored production instance still requires DreamHost SSH/database access; do not treat the public REST export as a complete database backup.
 
 ## Redirects
 
