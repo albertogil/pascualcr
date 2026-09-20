@@ -25,6 +25,22 @@ Google Search Console uses the URL-prefix property `https://www.pascualcr.com/`.
 
 Google Analytics 4 property: **Pascual Tapas & Bar**. Measurement ID: `G-DFFGR6RVNK`. `assets/js/analytics.js` loads the Google tag only after a visitor accepts analytics; keep its matching measurement-ID meta tag on indexable pages. Enhanced measurement is enabled. Do not send personal information through page URLs, forms, or Analytics events.
 
+## Current production setup
+
+- **Hosting:** DreamHost serves the live static site. GitHub stores the source; GitHub Pages is not used because DreamHost handles the custom domain and Apache redirects.
+- **Deployment:** Push approved changes to `main`, then manually run **Actions → Deploy to DreamHost → Run workflow**. See `DEPLOYMENT.md`; the workflow deliberately does not delete unspecified remote files.
+- **Search:** Google Search Console and Bing Webmaster Tools are configured for `https://www.pascualcr.com/`; both use the production sitemap. Retain `robots.txt`, `sitemap.xml`, canonical tags, and the Search Console verification tag.
+- **SEO:** Indexable pages have page titles, descriptions, canonical URLs, Open Graph/Twitter metadata, image alternatives, and Restaurant JSON-LD structured data. Google Rich Results Test found 2 valid eligible items on 2026-09-20.
+- **Privacy:** The visitor consent notice controls Analytics loading. `/privacy/` is intentionally `noindex`.
+- **Performance:** The 2026-09-19 desktop Lighthouse baseline was 93 performance / 100 accessibility / 100 best practices / 100 SEO.
+
+### Remaining follow-up
+
+- Confirm Google Search Console’s Pascual sitemap returns to a stable `Success` status after processing.
+- Add exact street address, hours, phone, reservation link, price range, and Google Business Profile URL before enriching the local-business listing.
+- Confirm the current menus, then transcribe them into accessible, searchable HTML while retaining the menu images.
+- Review GA4 and Search Console after real visitor traffic has accumulated.
+
 ## Principles
 
 - Plain HTML and CSS: no framework, build step, trackers, or cookies.
